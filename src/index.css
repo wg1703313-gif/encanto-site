@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #34283c;
+  --color-muted: #716778;
+  --color-lilac: #f2e3f5;
+  --color-lilac-strong: #e6c9eb;
+  --color-purple: #7c3689;
+  --color-blue: #1ba5d2;
+  --color-teal: #63b7a7;
+  --color-yellow: #ffd451;
+  --color-pink: #e995c4;
+  --color-paper: #fffdfb;
+  --font-sans: "Nunito Sans", "Avenir Next", Avenir, ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Baloo 2", "Trebuchet MS", var(--font-sans);
+}
+
+@layer base {
+  :root { font-family: var(--font-sans); color: var(--color-ink); background: var(--color-paper); font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+  html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+  body { margin: 0; min-width: 320px; min-height: 100vh; }
+  button, input, textarea { font: inherit; }
+  button, a { -webkit-tap-highlight-color: transparent; }
+  ::selection { background: #e6c9eb; color: #34283c; }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .soft-shadow { box-shadow: 0 24px 64px -36px rgb(70 36 81 / 35%); }
+  .dotted-pattern { background-image: radial-gradient(rgb(124 54 137 / 12%) .8px, transparent .8px); background-size: 18px 18px; }
+  .hero-glow { background: radial-gradient(ellipse at 78% 28%, rgb(255 212 81 / 44%), transparent 36%), radial-gradient(ellipse at 20% 78%, rgb(233 149 196 / 24%), transparent 38%); }
+}
